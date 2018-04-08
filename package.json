@@ -12,6 +12,7 @@
     "clean": "rimraf dist",
     "lint": "prettier --single-quote --write 'src/**/*.ts' && tslint 'src/**/*.ts'",
     "build": "npm run lint && npm run clean && tsc",
+    "prepare": "npm run lint && npm run clean && tsc",
     "prepublishOnly": "npm run build",
     "test": "npm run build && prettier --single-quote --write 'test/**/*.js' && node test/license-webpack-plugin.test.js"
   },
